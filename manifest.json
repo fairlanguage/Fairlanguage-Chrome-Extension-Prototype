@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+	"name": "fairlanguage",
+	"version": "0.1.2",
+	"description": "*** Achtung! Prototype! ***  Faire Sprache, schwere Sprache? Nope! fairlanguage macht Texte in deinem Browser automatisch fair.",
+	"icons": { "16": "images/fairlanguage_logo_16_white_color.png",
+           "48": "images/fairlanguage_logo_48_transparent.png",
+          "128": "images/fairlanguage_logo_128_transparent.png" },
+
+"browser_action": {
+      "default_icon": "images/fairlanguage_logo_16_white_color.png"
+   },
+
+
+	"content_scripts": 
+	[
+		{
+			"matches": ["*://*/*"], 
+			"js": ["myscript.js"],
+			"run_at": "document_end"  
+		}
+	]
+}
